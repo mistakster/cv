@@ -1,9 +1,4 @@
----
----
-
-@import "{{ site.theme }}";
-
-/* @import "./normalize.css"; */
+@import "./normalize.css";
 
 h1:not([id]) {
   display: none;
