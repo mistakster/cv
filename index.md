@@ -1,3 +1,8 @@
+---
+---
+
+@import "{{ site.theme }}";
+
 # Curriculum Vitæ
 
 ## Vladimir Kuznetsov
@@ -15,11 +20,11 @@ Languages: Russian, English
 
 ## Contacts
 
-Phone: +7-912-314-45-46
-Email: mistakster@gmail.com
-Skype: mistakster
-Github: https://github.com/mistakster/
-Linkedin: https://www.linkedin.com/in/kuznetsovvladimir/
+* Phone: +7-912-314-45-46
+* Email: mistakster@gmail.com
+* Skype: mistakster
+* Github: https://github.com/mistakster/
+* Linkedin: https://www.linkedin.com/in/kuznetsovvladimir/
 
 ## Experience
 
