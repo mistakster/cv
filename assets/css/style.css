@@ -87,6 +87,7 @@ a:hover {
 }
 
 .container {
+  position: relative;
   box-sizing: border-box;
   padding: 0 16px;
   max-width: 904px;
@@ -101,25 +102,16 @@ a:hover {
 
 @media (min-width: 768px) {
   .container {
-    padding: 0 32px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 32px 2fr 64px 1fr 32px;
   }
 
-  .column_wide {
-    flex: 1 1 100%;
+  .left {
+    grid-column-start: 2;
   }
 
-  .column_sidebar {
-    width: 33%;
-    flex: 1 1 33%;
-    padding-left: 64px;
+  .right {
+    grid-column-start: 4;
     padding-top: 24px;
-    box-sizing: border-box;
-  }
-
-  .column_content {
-    width: 66%;
-    flex: 1 1 66%;
   }
 }
