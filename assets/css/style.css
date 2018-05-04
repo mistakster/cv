@@ -1,4 +1,11 @@
+html {
+  font-size: 100%;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
 body {
+  line-height: 1.5rem;
   font-family: -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
@@ -8,64 +15,57 @@ body {
     Cantarell,
     "Helvetica Neue",
     sans-serif;
-  font-size: 16px;
-  padding-top: 6px;
-  padding-bottom: 66px;
+  padding-top: 0.375rem;
+  padding-bottom: 4.125rem;
 }
 
 body.grid {
   background-image: linear-gradient(0deg, rgba(0,0,100,0.1) 0, transparent 1px);
-  background-size: 24px 24px;
-}
-
-html {
-  line-height: 24px;
-  background-color: #f8f8f8;
-  color: #333;
+  background-size: 1.5rem 1.5rem;
 }
 
 h1 {
-  font-size: 54px;
+  font-size: 3.375rem;
   font-weight: bold;
-  line-height: 72px;
+  line-height: 4.5rem;
   margin-top: 0;
-  margin-bottom: 14px;
-  padding-top: 10px;
+  margin-bottom: 0.875rem;
+  padding-top: 0.625rem;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: bold;
-  line-height: 48px;
+  line-height: 3rem;
   margin-top: 0;
-  padding-top: 5px;
-  margin-bottom: 19px;
+  padding-top: 0.3125rem;
+  margin-bottom: 1.1875rem;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
-  line-height: 48px;
+  line-height: 3rem;
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 0;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 1.5rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 p, ul, ol, dl {
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .compact p {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 dt, dd {
@@ -89,29 +89,92 @@ a:hover {
 .container {
   position: relative;
   box-sizing: border-box;
-  padding: 0 16px;
-  max-width: 904px;
+  padding: 0 1rem;
+  max-width: 900px;
   margin: auto;
 }
 
 @media (min-width: 480px) {
   .container {
-    padding: 0 24px;
+    padding: 0 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    display: grid;
-    grid-template-columns: 32px 2fr 64px 1fr 32px;
+    padding: 0;
+  }
+
+  .container:after {
+    content: " ";
+    display: table;
+    clear: both;
   }
 
   .left {
-    grid-column-start: 2;
+    float: left;
+    width: 66.6667%;
+    box-sizing: border-box;
+    padding: 0 2rem;
   }
 
   .right {
-    grid-column-start: 4;
-    padding-top: 24px;
+    float: right;
+    width: 33.3333%;
+    box-sizing: border-box;
+    padding: 1.5rem 2rem 0;
+  }
+}
+
+@media print {
+  html {
+    background-color: white;
+    color: black;
+    font-size: 70%; /* 68.75%; */
+  }
+
+  a {
+    color: black;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  section, ul, ol, dl {
+    page-break-inside: avoid;    
+  }
+
+  .lead {
+    width: 30rem;
+  }
+
+  .optional {
+    display: none;
+  }
+
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  .container:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+  .left {
+    float: left;
+    width: 66.6667%;
+    box-sizing: border-box;
+    padding: 0 2rem;
+  }
+
+  .right {
+    float: right;
+    width: 33.3333%;
+    box-sizing: border-box;
+    padding: 1.5rem 2rem 0;
   }
 }
