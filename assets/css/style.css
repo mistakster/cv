@@ -68,6 +68,10 @@ p, ul, ol, dl {
   margin-bottom: 0.75rem;
 }
 
+.compact {
+  padding-bottom: 0.75rem;
+}
+
 dt, dd {
   margin-left: 0;
   margin-right: 0;
@@ -98,31 +102,63 @@ a:hover {
   .container {
     padding: 0 1.5rem;
   }
+
+  .sidebar {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .personal-info {
+    flex: 1 1 50%;
+    order: 2;
+  }
+
+  .contacts {
+    flex: 1 1 50%;
+    order: 1;
+  }
+
+  .skills {
+    flex: 1 1 100%;
+    order: 3;
+  }
 }
 
 @media (min-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+  
   .container {
     padding: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header sidebar"
+      "content sidebar"
   }
 
-  .container:after {
-    content: " ";
-    display: table;
-    clear: both;
+  header {
+    grid-area: header;
   }
 
-  .left {
-    float: left;
-    width: 66.6667%;
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  .content {
+    grid-area: content;
+  }
+
+  header, .sidebar, .content {
+    padding-left: 32px;
+    padding-right: 32px;
     box-sizing: border-box;
-    padding: 0 2rem;
   }
 
-  .right {
-    float: right;
-    width: 33.3333%;
-    box-sizing: border-box;
-    padding: 1.5rem 2rem 0;
+  .sidebar {
+    padding-top: 24px;
   }
 }
 
