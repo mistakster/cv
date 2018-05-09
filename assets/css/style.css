@@ -130,23 +130,33 @@ a:hover {
   }
   .container {
     padding: 0;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
       "header sidebar"
       "content sidebar"
   }
 
   header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: header;
   }
 
   .sidebar {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
     grid-area: sidebar;
   }
 
   .content {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
     grid-area: content;
   }
 
