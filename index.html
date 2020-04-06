@@ -15,64 +15,57 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="A portrait of Vladimir Kuznetsov in Florence, Italy, May 2019">
-  <meta property="og:profile:first_name" content="Vladimir">
-  <meta property="og:profile:last_name" content="Kuznetsov">
-  <meta property="og:profile:username" content="mistakster">
-  <meta property="og:profile:gender" content="male">
-  <!--
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "url": "https://mistakster.github.io/cv/",
-    "name": "Vladimir Kuznetsov — Curriculum Vitæ",
-    "description": "Front-end developer, solution architect, consultant, speaker"
-  }
-  </script>
-  -->
+  <meta property="profile:first_name" content="Vladimir">
+  <meta property="profile:last_name" content="Kuznetsov">
+  <meta property="profile:username" content="mistakster">
+  <meta property="profile:gender" content="male">
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" itemscope itemtype="http://schema.org/Person">
     <header>
-      <h1>Vladimir Kuznetsov</h1>
-      <p class="lead">Front-end developer, solution architect, consultant, speaker at local and international web development conferences.</p>
+      <h1 itemprop="name"><span itemprop="givenName">Vladimir</span> <span itemprop="familyName">Kuznetsov</span></h1>
+      <p class="lead" itemprop="description">Front-end developer, solution architect, consultant, speaker at local and international web development conferences.</p>
     </header>
     <section class="sidebar">
       <div class="personal-info">
         <h2>Personal info</h2>
         <dl>
           <dt>Date of birth</dt>
-          <dd>6 August 1977</dd>
+          <dd><time itemprop="birthDate" datetime="1977-08-06">6 August 1977</time></dd>
           <dt>Location</dt>
-          <dd>Chelyabinsk, Russia</dd>
+          <dd><span itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+            <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              <span itemprop="addressLocality">Chelyabinsk</span>, <span itemprop="addressCountry">Russia</span>
+            </span>
+          </span></dd>
           <dt>Languages</dt>
-          <dd>Russian, English</dd>
+          <dd><span itemprop="knowsLanguage">Russian</span>, <span itemprop="knowsLanguage">English</span></dd>
         </dl>
       </div>
       <div class="contacts">
         <h2>Contacts</h2>
         <dl>
           <dt>Phone</dt>
-          <dd>+7-912-314-45-46</dd>
+          <dd><span itemprop="telephone">+7-912-314-45-46</span></dd>
           <dt>Email</dt>
-          <dd><a href="mailto:mistakster@gmail.com">mistakster@gmail.com</a></dd>
+          <dd><a href="mailto:mistakster@gmail.com"><span itemprop="email">mistakster@gmail.com</span></a></dd>
           <dt>Skype</dt>
-          <dd>mistakster</dd>
+          <dd><span>mistakster</span></dd>
           <dt>Github</dt>
-          <dd><a href="https://github.com/mistakster/">mistakster</a></dd>
+          <dd><a itemprop="sameAs" href="https://github.com/mistakster/">mistakster</a></dd>
           <dt>Linkedin</dt>
-          <dd><a href="https://www.linkedin.com/in/kuznetsovvladimir/">kuznetsovvladimir</a></dd>
+          <dd><a itemprop="sameAs" href="https://www.linkedin.com/in/kuznetsovvladimir/">kuznetsovvladimir</a></dd>
         </dl>
       </div>
       <div class="skills">
         <h2>Skills</h2>
         <div class="compact">
-          <p>Programming languages: JavaScript, Java, PHP, C#</p>
-          <p>Proficient in creation custom Babel, PostCSS, and webpack plugins</p>
-          <p>Experienced in *NIX command line tools</p>
+          <p>Programming languages: <span itemprop="knowsAbout">JavaScript</span>, <span itemprop="knowsAbout">Java</span>, <span itemprop="knowsAbout">PHP</span>, C#</p>
+          <p>Proficient in creation custom <span itemprop="knowsAbout">Babel</span>, <span itemprop="knowsAbout">PostCSS</span>, and <span itemprop="knowsAbout">webpack</span> plugins</p>
+          <p>Experienced in <span itemprop="knowsAbout">*NIX command line tools</span></p>
           <p>Analytical mind</p>
           <p>Problem-solving skills</p>
           <p>Good communication and collaborative work skills</p>
