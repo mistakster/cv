@@ -102,6 +102,10 @@ a:hover {
   display: none;
 }
 
+.footer {
+  font-size: 50%;
+}
+
 @media screen and (min-width: 480px) {
   .container {
     padding: 0 1.5rem;
@@ -136,6 +140,7 @@ a:hover {
   .container {
     padding: 0;
     display: grid;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
       "header sidebar"
@@ -167,6 +172,10 @@ a:hover {
 
   .sidebar {
     padding-top: 24px;
+  }
+
+  .footer {
+    align-self: end;
   }
 }
 
